@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Catalog.Api.Controllers.Menus
 {
-    [Route("api/menues")]
+    [Route("api/[controller]")]
     [ApiController]
     public class MenusController : ControllerBase
     {

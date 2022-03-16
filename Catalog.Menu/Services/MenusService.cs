@@ -28,56 +28,102 @@ namespace Catalog.Menus.Services
 
         public async Task AddAsync(AddMenuDto dto)
         {
-            var model = _mapper.Map<Menu>(dto);
-            model.Id = Guid.NewGuid();
+            try
+            {
+                var model = _mapper.Map<Menu>(dto);
+                model.Id = Guid.NewGuid();
 
-            await _menusRepository.AddAsync(model);
+                await _menusRepository.AddAsync(model);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
         public async Task<IEnumerable<MenuDto>> GetAllAsync()
         {
-            var result = await _menusRepository.GetAllAsync();
+            try
+            {
 
-            return _mapper.Map<IEnumerable<MenuDto>>(result);
+                var result = await _menusRepository.GetAllAsync();
+
+                return _mapper.Map<IEnumerable<MenuDto>>(result);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public async Task<MenuDto> GetAsync(Guid id)
         {
-            var result = await _menusRepository.GetAsync(id);
+            try
+            {
+                var result = await _menusRepository.GetAsync(id);
 
-            return _mapper.Map<MenuDto>(result);
+                return _mapper.Map<MenuDto>(result);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public async Task RemoveAsync(Guid id)
         {
-            await _menusRepository.RemoveAsync(id);
+            try
+            {
+
+                await _menusRepository.RemoveAsync(id);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public async Task UpdateAsync(Guid id, UpdateMenuDto dto)
         {
-            var model = await _menusRepository.GetAsync(id);
-
-            if (dto.Price.HasValue)
+            try
             {
-                model.Price = dto.Price.Value;
-            }
 
-            if (dto.Cost.HasValue)
+
+
+                var model = await _menusRepository.GetAsync(id);
+
+                if (dto.Price.HasValue)
+                {
+                    model.Price = dto.Price.Value;
+                }
+
+                if (dto.Cost.HasValue)
+                {
+                    model.Cost = dto.Cost.Value;
+                }
+
+                if (!string.IsNullOrEmpty(dto.Name))
+                {
+                    model.Name = dto.Name;
+                }
+
+                if (!string.IsNullOrEmpty(dto.Image))
+                {
+                    model.Image = dto.Image;
+                }
+
+                await _menusRepository.UpdateAsync(model);
+            }
+            catch (Exception)
             {
-                model.Cost = dto.Cost.Value;
-            }
 
-            if (!string.IsNullOrEmpty(dto.Name))
-            {
-                model.Name = dto.Name;
+                throw;
             }
-
-            if (!string.IsNullOrEmpty(dto.Image))
-            {
-                model.Image = dto.Image;
-            }
-
-            await _menusRepository.UpdateAsync(model);
         }
 
         #endregion Methods

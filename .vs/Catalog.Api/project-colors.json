@@ -40,7 +40,17 @@
       "ProjectGuid": "0914a349-7497-4c2c-a24e-9e22a8139bb7",
       "DisplayName": "Catalog.DependencyResolver",
       "ColorIndex": 6
+    },
+    "11893623-1831-4ec6-81f0-e126309abc10": {
+      "ProjectGuid": "11893623-1831-4ec6-81f0-e126309abc10",
+      "DisplayName": "Catalog.Email",
+      "ColorIndex": 7
+    },
+    "5fe6c135-b3f7-4744-b049-99404d8942ec": {
+      "ProjectGuid": "5fe6c135-b3f7-4744-b049-99404d8942ec",
+      "DisplayName": "Catalog.Email",
+      "ColorIndex": 8
     }
   },
-  "NextColorIndex": 7
+  "NextColorIndex": 9
 }
