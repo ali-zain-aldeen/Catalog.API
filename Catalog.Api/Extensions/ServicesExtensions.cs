@@ -1,17 +1,19 @@
 ﻿using Catalog.Menus.Contracts;
 using Catalog.Menus.Services;
+using Catalog.Repositories.Menus;
 using Catalog.Repositories.Menus.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace Catalog.Api.Extensions
 {
     public static class ServicesExtensions
     {
-
         public static void RegisterDependencies(this IServiceCollection services)
         {
             services
                 .AddServices()
                 .AddRepositories()
+                .AddContexts()
                 .AddMappers()
                 .AddVaidations();
         }
@@ -26,6 +28,13 @@ namespace Catalog.Api.Extensions
         private static IServiceCollection AddRepositories(this IServiceCollection services)
         {
             services.AddScoped<IMenusRepository, MenusRepository>();
+
+            return services;
+        }
+
+        private static IServiceCollection AddContexts(this IServiceCollection services)
+        {
+            services.AddDbContext<MenusDbContext>(x => x.UseInMemoryDatabase("MenuesDb"));
 
             return services;
         }

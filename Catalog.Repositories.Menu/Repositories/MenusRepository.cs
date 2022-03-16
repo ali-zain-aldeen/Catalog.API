@@ -5,14 +5,6 @@ namespace Catalog.Repositories.Menus.Repositories
 {
     public class MenusRepository : IMenusRepository
     {
-        #region Properties
-
-        #endregion
-
-        #region Constructor
-
-        #endregion
-
         #region Methods
 
         public Task<IEnumerable<Menu>> GetAllAsync()
@@ -40,6 +32,6 @@ namespace Catalog.Repositories.Menus.Repositories
             throw new NotImplementedException();
         }
 
-        #endregion
+        #endregion Methods
     }
 }

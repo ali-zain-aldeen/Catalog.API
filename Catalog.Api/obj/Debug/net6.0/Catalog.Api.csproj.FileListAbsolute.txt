@@ -29,3 +29,10 @@ C:\repos\Catalog.Api\Catalog.Api\obj\Debug\net6.0\Catalog.Api.dll
 C:\repos\Catalog.Api\Catalog.Api\obj\Debug\net6.0\ref\Catalog.Api.dll
 C:\repos\Catalog.Api\Catalog.Api\obj\Debug\net6.0\Catalog.Api.pdb
 C:\repos\Catalog.Api\Catalog.Api\obj\Debug\net6.0\Catalog.Api.genruntimeconfig.cache
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\AutoMapper.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\Catalog.Repositories.Menus.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\Catalog.Repositories.Menus.pdb
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll

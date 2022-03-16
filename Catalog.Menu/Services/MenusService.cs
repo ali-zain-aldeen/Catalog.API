@@ -9,7 +9,7 @@ namespace Catalog.Menus.Services
 
         private readonly IMenusRepository _menusRepository;
 
-        #endregion
+        #endregion Properties
 
         #region Constructor
 
@@ -18,7 +18,7 @@ namespace Catalog.Menus.Services
             _menusRepository = menusRepository;
         }
 
-        #endregion
+        #endregion Constructor
 
         #region Methods
 
@@ -47,6 +47,6 @@ namespace Catalog.Menus.Services
             throw new NotImplementedException();
         }
 
-        #endregion
+        #endregion Methods
     }
 }
