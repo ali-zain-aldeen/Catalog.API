@@ -1,5 +1,6 @@
 ﻿using Catalog.Menus.Contracts;
 using Catalog.Menus.Dtos;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Catalog.Api.Controllers.Menus
@@ -11,14 +12,18 @@ namespace Catalog.Api.Controllers.Menus
         #region Properties
 
         private readonly IMenusService _service;
+        private readonly AbstractValidator<AddMenuDto> _addMenueValidator;
+        private readonly AbstractValidator<UpdateMenuDto> _updateMenueValidator;
 
         #endregion
 
         #region Constructor
 
-        public MenusController(IMenusService service)
+        public MenusController(IMenusService service, AbstractValidator<AddMenuDto> addMenueValidator, AbstractValidator<UpdateMenuDto> updateMenueValidator)
         {
             _service = service;
+            _addMenueValidator = addMenueValidator;
+            _updateMenueValidator = updateMenueValidator;
         }
 
         #endregion
@@ -60,6 +65,12 @@ namespace Catalog.Api.Controllers.Menus
         {
             try
             {
+                var result = _addMenueValidator.Validate(dto);
+                if (!result.IsValid)
+                {
+                    return BadRequest(result.Errors);
+                }
+
                 await _service.AddAsync(dto);
                 return Ok();
             }
@@ -74,6 +85,12 @@ namespace Catalog.Api.Controllers.Menus
         {
             try
             {
+                var result = _updateMenueValidator.Validate(dto);
+                if (!result.IsValid)
+                {
+                    return BadRequest(result.Errors);
+                }
+
                 await _service.UpdateAsync(id, dto);
                 return Ok();
             }

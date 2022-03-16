@@ -1,9 +1,12 @@
 ﻿using Catalog.Menus.Contracts;
+using Catalog.Menus.Dtos;
 using Catalog.Menus.Profiles;
 using Catalog.Menus.Services;
+using Catalog.Menus.Validators;
 using Catalog.Repositories.Menus;
 using Catalog.Repositories.Menus.Profiles;
 using Catalog.Repositories.Menus.Repositories;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
 namespace Catalog.Api.Extensions
@@ -52,7 +55,9 @@ namespace Catalog.Api.Extensions
 
         private static IServiceCollection AddVaidations(this IServiceCollection services)
         {
-            return services;
+            return services
+                .AddScoped<AbstractValidator<AddMenuDto>, AddMenuValidator>()
+                .AddScoped<AbstractValidator<UpdateMenuDto>, UpdateMenuValidator>();
         }
     }
 }

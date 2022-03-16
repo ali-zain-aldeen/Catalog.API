@@ -37,3 +37,5 @@ C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.
 C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\FluentValidation.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\FluentValidator.dll
