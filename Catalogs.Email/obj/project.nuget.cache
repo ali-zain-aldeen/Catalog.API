@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "usWhvbut1FrScn3U9uUeWAKhR/EzDtP9oHlFUoCGmjq7xZwrb/ciGfLE4SpdD8QY+Fdx7V0ywFkoYWyeYHi3Pg==",
+  "dgSpecHash": "JhhwVQMUw4/mlFLwEskgFZhr7d1Ds7YvnMy5I/DXE9AQWNuM3Km97GIRrK6k8uLNiSPmEoM/KogteK49AJiiaA==",
   "success": true,
-  "projectFilePath": "C:\\repos\\Catalog.Api\\Catalogs.Email\\Catalogs.Email.csproj",
+  "projectFilePath": "C:\\repos\\Catalog.Api\\Catalogs.Email\\Catalog.Emails.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

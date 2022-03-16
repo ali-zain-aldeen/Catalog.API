@@ -1,4 +1,4 @@
-﻿namespace Catalogs.Email
+﻿namespace Catalogs.Emails
 {
     public class Class1
     {

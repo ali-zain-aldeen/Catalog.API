@@ -1,0 +1,46 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4dc93298-8175-4ad3-8426-3ecda12ac7b3": {
+      "ProjectGuid": "4dc93298-8175-4ad3-8426-3ecda12ac7b3",
+      "DisplayName": "Catalog.Emails",
+      "ColorIndex": 0
+    },
+    "a37a3c0e-9eba-4bff-b7ed-365b37125d22": {
+      "ProjectGuid": "a37a3c0e-9eba-4bff-b7ed-365b37125d22",
+      "DisplayName": "Catalog.Api",
+      "ColorIndex": 1
+    },
+    "3580caa9-24ac-42f3-9dd4-5971def484ec": {
+      "ProjectGuid": "3580caa9-24ac-42f3-9dd4-5971def484ec",
+      "DisplayName": "Catalog.Menus",
+      "ColorIndex": 2
+    },
+    "e7f4adbe-d7f0-45e1-8f6f-7a24f39b55b8": {
+      "ProjectGuid": "e7f4adbe-d7f0-45e1-8f6f-7a24f39b55b8",
+      "DisplayName": "Catalog.Common",
+      "ColorIndex": 3
+    },
+    "0df12b62-f8cc-4c9d-a1ab-4abf50acc252": {
+      "ProjectGuid": "0df12b62-f8cc-4c9d-a1ab-4abf50acc252",
+      "DisplayName": "3-Persistence",
+      "ColorIndex": 4
+    },
+    "d78495e7-f0e5-444b-8e9c-963ab062699a": {
+      "ProjectGuid": "d78495e7-f0e5-444b-8e9c-963ab062699a",
+      "DisplayName": "Catalog.Repositories.Menus",
+      "ColorIndex": 5
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "0914a349-7497-4c2c-a24e-9e22a8139bb7": {
+      "ProjectGuid": "0914a349-7497-4c2c-a24e-9e22a8139bb7",
+      "DisplayName": "Catalog.DependencyResolver",
+      "ColorIndex": 6
+    }
+  },
+  "NextColorIndex": 7
+}

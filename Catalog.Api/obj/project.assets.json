@@ -72,6 +72,42 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Catalog.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Catalog.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Catalog.Common.dll": {}
+        }
+      },
+      "Catalog.Menus/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Catalog.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Catalog.Menus.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Catalog.Menus.dll": {}
+        }
+      },
+      "Catalog.Repositories.Menus/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Catalog.Menus": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Catalog.Repositories.Menus.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Catalog.Repositories.Menus.dll": {}
+        }
       }
     }
   },
@@ -200,10 +236,28 @@
         "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Catalog.Common/1.0.0": {
+      "type": "project",
+      "path": "../Catalog.Common/Catalog.Common.csproj",
+      "msbuildProject": "../Catalog.Common/Catalog.Common.csproj"
+    },
+    "Catalog.Menus/1.0.0": {
+      "type": "project",
+      "path": "../Catalog.Menu/Catalog.Menus.csproj",
+      "msbuildProject": "../Catalog.Menu/Catalog.Menus.csproj"
+    },
+    "Catalog.Repositories.Menus/1.0.0": {
+      "type": "project",
+      "path": "../Catalog.Repositories.Menu/Catalog.Repositories.Menus.csproj",
+      "msbuildProject": "../Catalog.Repositories.Menu/Catalog.Repositories.Menus.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Catalog.Common >= 1.0.0",
+      "Catalog.Menus >= 1.0.0",
+      "Catalog.Repositories.Menus >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -237,7 +291,17 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\repos\\Catalog.Api\\Catalog.Common\\Catalog.Common.csproj": {
+              "projectPath": "C:\\repos\\Catalog.Api\\Catalog.Common\\Catalog.Common.csproj"
+            },
+            "C:\\repos\\Catalog.Api\\Catalog.Menu\\Catalog.Menus.csproj": {
+              "projectPath": "C:\\repos\\Catalog.Api\\Catalog.Menu\\Catalog.Menus.csproj"
+            },
+            "C:\\repos\\Catalog.Api\\Catalog.Repositories.Menu\\Catalog.Repositories.Menus.csproj": {
+              "projectPath": "C:\\repos\\Catalog.Api\\Catalog.Repositories.Menu\\Catalog.Repositories.Menus.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zd7CwoAL6ii6Y45cwMumcVZIQoYdQN2XWcGSPfZMY3YmINTBBauN0Cm+NBdEP68pQKLaeuxsBtlgP+AD7mQ74g==",
+  "dgSpecHash": "HOKI5sDC6nSZ7RedTnykSvzCQ5xPG8sw6tu8vfMQj3D7T9Kzwx46BiEI/JF/FNrbmBNCey8KBXI/5K0dUSh5Zw==",
   "success": true,
-  "projectFilePath": "C:\\repos\\Catalog.Api\\Catalog.Menu\\Catalog.Menu.csproj",
+  "projectFilePath": "C:\\repos\\Catalog.Api\\Catalog.Menu\\Catalog.Menus.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

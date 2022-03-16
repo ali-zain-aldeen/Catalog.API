@@ -10,4 +10,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Catalog.Common\Catalog.Common.csproj" />
+    <ProjectReference Include="..\Catalog.Menu\Catalog.Menus.csproj" />
+    <ProjectReference Include="..\Catalog.Repositories.Menu\Catalog.Repositories.Menus.csproj" />
+  </ItemGroup>
+
 </Project>

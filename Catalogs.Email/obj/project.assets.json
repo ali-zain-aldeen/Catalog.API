@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repos\\Catalog.Api\\Catalogs.Email\\Catalogs.Email.csproj",
-      "projectName": "Catalogs.Email",
-      "projectPath": "C:\\repos\\Catalog.Api\\Catalogs.Email\\Catalogs.Email.csproj",
+      "projectUniqueName": "C:\\repos\\Catalog.Api\\Catalogs.Email\\Catalog.Emails.csproj",
+      "projectName": "Catalog.Emails",
+      "projectPath": "C:\\repos\\Catalog.Api\\Catalogs.Email\\Catalog.Emails.csproj",
       "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
       "outputPath": "C:\\repos\\Catalog.Api\\Catalogs.Email\\obj\\",
       "projectStyle": "PackageReference",
