@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "drMNrfYnH5wyMdc0wmUgXmuU9TlDXCwwF4hU3WEwJvSMtLC612MHicMRkVmFlVKQE4azAXoiDusGFQ+JFQIU7w==",
+  "dgSpecHash": "bOSamLA9F6X9f/bbDxrF+cbKdwXMlNXw5bs/DHeT8wF93aj8twbuRQnndr6ArT/jeC68lkhrjqepOOUcoooFFw==",
   "success": true,
   "projectFilePath": "C:\\repos\\Catalog.Api\\Catalog.Menu\\Catalog.Menus.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ali\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\Ali\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\Ali\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Ali\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",
     "C:\\Users\\Ali\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.3\\microsoft.entityframeworkcore.abstractions.6.0.3.nupkg.sha512",

@@ -1,37 +1,75 @@
-﻿using Catalog.Menus.Contracts;
+﻿using AutoMapper;
+using Catalog.Menus.Contracts;
 using Catalog.Menus.Domains;
+using Catalog.Repositories.Menus.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Catalog.Repositories.Menus.Repositories
 {
     public class MenusRepository : IMenusRepository
     {
+
+        #region Properties
+
+        protected MenusDbContext _context;
+        protected IMapper _mapper;
+
+
+        #endregion
+
+        #region Constructor
+
+        public MenusRepository(MenusDbContext context, IMapper mapper)
+        {
+            _context = context;
+            _mapper = mapper;
+        }
+
+        #endregion
+
         #region Methods
 
-        public Task<IEnumerable<Menu>> GetAllAsync()
+        public async Task<IEnumerable<Menu>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            var result = await _context.Menues.ToListAsync();
+            return _mapper.Map<IEnumerable<Menu>>(result);
         }
 
-        public Task<Menu> GetAsync(Guid id)
+        public async Task<Menu> GetAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var result = await _context.Menues.FindAsync(id);
+            return _mapper.Map<Menu>(result);
         }
 
-        public Task AddAsync(Menu menu)
+        public async Task AddAsync(Menu menu)
         {
-            throw new NotImplementedException();
+            var entity = _mapper.Map<MenuEntity>(menu);
+            await _context.Menues.AddAsync(entity);
+
+            await _context.SaveChangesAsync();
         }
 
-        public Task RemoveAsync(Guid id)
+        public async Task RemoveAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var result = await _context.Menues.FindAsync(id);
+            _context.Menues.Remove(result);
+
+            await _context.SaveChangesAsync();
         }
 
-        public Task UpdateAsync(Menu menu)
+        public async Task UpdateAsync(Menu menu)
         {
-            throw new NotImplementedException();
+            var result = await _context.Menues.FindAsync(menu.Id);
+
+            result.Name = menu.Name;
+            result.Price = menu.Price;
+            result.Cost = menu.Cost;
+            result.Image = menu.Image;
+
+            await _context.SaveChangesAsync();
         }
 
         #endregion Methods
+
     }
 }

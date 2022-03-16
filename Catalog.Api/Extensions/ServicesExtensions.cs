@@ -1,6 +1,8 @@
 ﻿using Catalog.Menus.Contracts;
+using Catalog.Menus.Profiles;
 using Catalog.Menus.Services;
 using Catalog.Repositories.Menus;
+using Catalog.Repositories.Menus.Profiles;
 using Catalog.Repositories.Menus.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -41,7 +43,11 @@ namespace Catalog.Api.Extensions
 
         private static IServiceCollection AddMappers(this IServiceCollection services)
         {
-            return services;
+            return services
+            .AddAutoMapper(
+                typeof(MenuApplicationProfile).Assembly,
+                typeof(MenuProfile).Assembly
+            );
         }
 
         private static IServiceCollection AddVaidations(this IServiceCollection services)

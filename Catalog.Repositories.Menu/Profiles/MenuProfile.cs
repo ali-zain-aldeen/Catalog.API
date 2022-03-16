@@ -8,7 +8,7 @@ namespace Catalog.Repositories.Menus.Profiles
     {
         public MenuProfile()
         {
-            CreateMap<MenuEntity, Menu>();
+            CreateMap<MenuEntity, Menu>().ReverseMap();
         }
     }
 }

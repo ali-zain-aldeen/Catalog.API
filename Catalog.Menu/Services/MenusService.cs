@@ -1,4 +1,6 @@
-﻿using Catalog.Menus.Contracts;
+﻿using AutoMapper;
+using Catalog.Menus.Contracts;
+using Catalog.Menus.Domains;
 using Catalog.Menus.Dtos;
 
 namespace Catalog.Menus.Services
@@ -8,43 +10,74 @@ namespace Catalog.Menus.Services
         #region Properties
 
         private readonly IMenusRepository _menusRepository;
+        private readonly IMapper _mapper;
 
         #endregion Properties
 
         #region Constructor
 
-        public MenusService(IMenusRepository menusRepository)
+        public MenusService(IMenusRepository menusRepository, IMapper mapper)
         {
             _menusRepository = menusRepository;
+            _mapper = mapper;
         }
 
         #endregion Constructor
 
         #region Methods
 
-        public Task AddAsync(AddMenuDto dto)
+        public async Task AddAsync(AddMenuDto dto)
         {
-            throw new NotImplementedException();
+            var model = _mapper.Map<Menu>(dto);
+            model.Id = Guid.NewGuid();
+
+            await _menusRepository.AddAsync(model);
         }
 
-        public Task<IEnumerable<MenuDto>> GetAllAsync()
+        public async Task<IEnumerable<MenuDto>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            var result = await _menusRepository.GetAllAsync();
+
+            return _mapper.Map<IEnumerable<MenuDto>>(result);
         }
 
-        public Task<MenuDto> GetAsync(Guid id)
+        public async Task<MenuDto> GetAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var result = await _menusRepository.GetAsync(id);
+
+            return _mapper.Map<MenuDto>(result);
         }
 
-        public Task RemoveAsync(Guid id)
+        public async Task RemoveAsync(Guid id)
         {
-            throw new NotImplementedException();
+            await _menusRepository.RemoveAsync(id);
         }
 
-        public Task UpdateAsync(Guid id, UpdateMenuDto dto)
+        public async Task UpdateAsync(Guid id, UpdateMenuDto dto)
         {
-            throw new NotImplementedException();
+            var model = await _menusRepository.GetAsync(id);
+
+            if (dto.Price.HasValue)
+            {
+                model.Price = dto.Price.Value;
+            }
+
+            if (dto.Cost.HasValue)
+            {
+                model.Cost = dto.Cost.Value;
+            }
+
+            if (!string.IsNullOrEmpty(dto.Name))
+            {
+                model.Name = dto.Name;
+            }
+
+            if (!string.IsNullOrEmpty(dto.Image))
+            {
+                model.Image = dto.Image;
+            }
+
+            await _menusRepository.UpdateAsync(model);
         }
 
         #endregion Methods
