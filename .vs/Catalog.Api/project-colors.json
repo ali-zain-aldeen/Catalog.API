@@ -50,7 +50,12 @@
       "ProjectGuid": "5fe6c135-b3f7-4744-b049-99404d8942ec",
       "DisplayName": "Catalog.Email",
       "ColorIndex": 8
+    },
+    "1549c6a0-65d6-4472-88e8-16884bf9cf3a": {
+      "ProjectGuid": "1549c6a0-65d6-4472-88e8-16884bf9cf3a",
+      "DisplayName": "Catalog.ApiGateway",
+      "ColorIndex": 9
     }
   },
-  "NextColorIndex": 9
+  "NextColorIndex": 10
 }

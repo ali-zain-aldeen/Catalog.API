@@ -1,0 +1,55 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7222"
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Menus/{everything}",
+      "DownstreamScheme": "https",
+      "UpstreamHttpMethod": [
+        "POST",
+        "PATCH",
+        "GET",
+        "DELETE"
+      ],
+      "UpstreamPathTemplate": "/menu/{everything}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7222"
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Menus",
+      "DownstreamScheme": "https",
+      "UpstreamHttpMethod": [
+        "POST",
+        "PATCH",
+        "GET",
+        "DELETE"
+      ],
+      "UpstreamPathTemplate": "/menu/"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7252"
+        }
+      ],
+      "DownstreamPathTemplate": "/EmailsTest",
+      "DownstreamScheme": "https",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "UpstreamPathTemplate": "/EmailsTest"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7223/"
+  }
+}

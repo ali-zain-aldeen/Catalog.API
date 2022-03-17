@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using Catalog.Common.Models;
 using Catalog.Menus.Contracts;
 using Catalog.Menus.Domains;
 using Catalog.Menus.Dtos;
+using MassTransit;
 
 namespace Catalog.Menus.Services
 {
@@ -11,15 +13,17 @@ namespace Catalog.Menus.Services
 
         private readonly IMenusRepository _menusRepository;
         private readonly IMapper _mapper;
+        private readonly IBus _bus;
 
         #endregion Properties
 
         #region Constructor
 
-        public MenusService(IMenusRepository menusRepository, IMapper mapper)
+        public MenusService(IMenusRepository menusRepository, IMapper mapper, IBus bus)
         {
             _menusRepository = menusRepository;
             _mapper = mapper;
+            _bus = bus;
         }
 
         #endregion Constructor
@@ -34,6 +38,19 @@ namespace Catalog.Menus.Services
                 model.Id = Guid.NewGuid();
 
                 await _menusRepository.AddAsync(model);
+
+
+                //Sending Emails
+                var email = new EmailMessage
+                {
+                    MenuName = dto.Name,
+                    ToEmail = "alizainaldeen17@gmail.com",
+                    ToName = "ali"
+                };
+
+                Uri uri = new Uri("rabbitmq://localhost/emailsQueue");
+                var endPoint = await _bus.GetSendEndpoint(uri);
+                await endPoint.Send(email);
             }
             catch (Exception)
             {
@@ -92,8 +109,6 @@ namespace Catalog.Menus.Services
         {
             try
             {
-
-
 
                 var model = await _menusRepository.GetAsync(id);
 

@@ -39,3 +39,14 @@ C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\Microsoft.Extensions.Caching.M
 C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\FluentValidation.dll
 C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\FluentValidator.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\Automatonymous.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\GreenPipes.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\MassTransit.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\MassTransit.AspNetCoreIntegration.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\MassTransit.ExtensionsDependencyInjectionIntegration.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\MassTransit.RabbitMqTransport.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\NewId.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\repos\Catalog.Api\Catalog.Api\bin\Debug\net6.0\RabbitMQ.Client.dll

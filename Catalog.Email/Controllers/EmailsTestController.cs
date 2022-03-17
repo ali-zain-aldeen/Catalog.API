@@ -1,3 +1,4 @@
+using Catalog.Common.Models;
 using Catalog.Emails.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,12 +19,11 @@ namespace Catalog.Email.Controllers
         [HttpGet]
         public async Task<IActionResult> Test()
         {
-            await _emailService.SendEmailAsync(new Emails.Models.EmailMessage
+            await _emailService.SendEmailAsync(new EmailMessage
             {
-                Content = "<p> test </p>",
-                Subject = "this is a test",
-                ToAddress = "alizainaldeen17@gmail.com",
-                ToName = "test"
+                MenuName = "test",
+                ToName = "ali",
+                ToEmail = "test"
             });
 
             return Ok();

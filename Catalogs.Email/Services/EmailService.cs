@@ -1,6 +1,6 @@
-﻿using Catalog.Emails.Configuration;
+﻿using Catalog.Common.Models;
+using Catalog.Emails.Configuration;
 using Catalog.Emails.Contracts;
-using Catalog.Emails.Models;
 using MailKit.Net.Smtp;
 using MimeKit;
 using MimeKit.Text;
@@ -30,12 +30,13 @@ namespace Catalog.Emails.Services
         {
             var message = new MimeMessage();
             message.From.Add(new MailboxAddress(_mailSettings.DisplayName, _mailSettings.Mail));
-            message.To.Add(new MailboxAddress(emailMessage.ToName, emailMessage.ToAddress));
-            message.Subject = emailMessage.Subject;
+            message.To.Add(new MailboxAddress(emailMessage.ToName, emailMessage.ToEmail));
+            message.Subject = "New Menu Item!!!";
             message.Body = new TextPart(TextFormat.Html)
             {
-                Text = emailMessage.Content
+                Text = $"<p> New menue item with name {emailMessage.MenuName} has been added"
             };
+
             using (var emailClient = new SmtpClient())
             {
                 //The last parameter here is to use SSL (Which you should!)

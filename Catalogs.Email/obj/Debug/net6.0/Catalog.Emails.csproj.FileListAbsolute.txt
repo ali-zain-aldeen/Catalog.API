@@ -10,3 +10,6 @@ C:\repos\Catalog.Api\Catalogs.Email\obj\Debug\net6.0\Catalog.Emails.csproj.CoreC
 C:\repos\Catalog.Api\Catalogs.Email\obj\Debug\net6.0\Catalog.Emails.dll
 C:\repos\Catalog.Api\Catalogs.Email\obj\Debug\net6.0\ref\Catalog.Emails.dll
 C:\repos\Catalog.Api\Catalogs.Email\obj\Debug\net6.0\Catalog.Emails.pdb
+C:\repos\Catalog.Api\Catalogs.Email\bin\Debug\net6.0\Catalog.Common.dll
+C:\repos\Catalog.Api\Catalogs.Email\bin\Debug\net6.0\Catalog.Common.pdb
+C:\repos\Catalog.Api\Catalogs.Email\obj\Debug\net6.0\Catalog.Emails.csproj.CopyComplete

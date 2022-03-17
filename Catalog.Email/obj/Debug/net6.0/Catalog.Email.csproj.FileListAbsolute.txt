@@ -37,3 +37,16 @@ C:\repos\Catalog.Api\Catalog.Email\obj\Debug\net6.0\Catalog.Email.dll
 C:\repos\Catalog.Api\Catalog.Email\obj\Debug\net6.0\ref\Catalog.Email.dll
 C:\repos\Catalog.Api\Catalog.Email\obj\Debug\net6.0\Catalog.Email.pdb
 C:\repos\Catalog.Api\Catalog.Email\obj\Debug\net6.0\Catalog.Email.genruntimeconfig.cache
+C:\repos\Catalog.Api\Catalog.Email\bin\Debug\net6.0\Automatonymous.dll
+C:\repos\Catalog.Api\Catalog.Email\bin\Debug\net6.0\GreenPipes.dll
+C:\repos\Catalog.Api\Catalog.Email\bin\Debug\net6.0\MassTransit.dll
+C:\repos\Catalog.Api\Catalog.Email\bin\Debug\net6.0\MassTransit.AspNetCoreIntegration.dll
+C:\repos\Catalog.Api\Catalog.Email\bin\Debug\net6.0\MassTransit.ExtensionsDependencyInjectionIntegration.dll
+C:\repos\Catalog.Api\Catalog.Email\bin\Debug\net6.0\MassTransit.RabbitMqTransport.dll
+C:\repos\Catalog.Api\Catalog.Email\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\repos\Catalog.Api\Catalog.Email\bin\Debug\net6.0\NewId.dll
+C:\repos\Catalog.Api\Catalog.Email\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\repos\Catalog.Api\Catalog.Email\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\repos\Catalog.Api\Catalog.Email\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\repos\Catalog.Api\Catalog.Email\bin\Debug\net6.0\Catalog.Common.dll
+C:\repos\Catalog.Api\Catalog.Email\bin\Debug\net6.0\Catalog.Common.pdb

@@ -7,6 +7,7 @@ using Catalog.Repositories.Menus;
 using Catalog.Repositories.Menus.Profiles;
 using Catalog.Repositories.Menus.Repositories;
 using FluentValidation;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 
 namespace Catalog.Api.Extensions
@@ -20,7 +21,8 @@ namespace Catalog.Api.Extensions
                 .AddRepositories()
                 .AddContexts()
                 .AddMappers()
-                .AddVaidations();
+                .AddVaidations()
+                .AddMessageBrokers();
         }
 
         private static IServiceCollection AddServices(this IServiceCollection services)
@@ -58,6 +60,24 @@ namespace Catalog.Api.Extensions
             return services
                 .AddScoped<AbstractValidator<AddMenuDto>, AddMenuValidator>()
                 .AddScoped<AbstractValidator<UpdateMenuDto>, UpdateMenuValidator>();
+        }
+
+        private static IServiceCollection AddMessageBrokers(this IServiceCollection services)
+        {
+            return
+            services.AddMassTransit(x =>
+            {
+                x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(config =>
+                {
+                    config.UseHealthCheck(provider);
+                    config.Host(new Uri("rabbitmq://localhost"), h =>
+                    {
+                        h.Username("guest");
+                        h.Password("guest");
+                    });
+                }));
+            })
+            .AddMassTransitHostedService();
         }
     }
 }

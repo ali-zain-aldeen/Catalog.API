@@ -1,4 +1,4 @@
-﻿using Catalog.Emails.Models;
+﻿using Catalog.Common.Models;
 
 namespace Catalog.Emails.Contracts
 {
