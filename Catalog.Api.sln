@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Api", "Catalog.Api\Catalog.Api.csproj", "{A37A3C0E-9EBA-4BFF-B7ED-365B37125D22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Api", "API\Catalog.Api\Catalog.Api.csproj", "{A37A3C0E-9EBA-4BFF-B7ED-365B37125D22}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Endpoints", "1-Endpoints", "{C47A2211-E084-4EA2-AA5E-843178982B72}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Domains", "2-Domains", "{8499A1DD-9163-4CF6-9429-2410A77698FC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Menus", "Catalog.Menu\Catalog.Menus.csproj", "{3580CAA9-24AC-42F3-9DD4-5971DEF484EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Menus", "Domains\Catalog.Menu\Catalog.Menus.csproj", "{3580CAA9-24AC-42F3-9DD4-5971DEF484EC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Emails", "Catalogs.Email\Catalog.Emails.csproj", "{4DC93298-8175-4AD3-8426-3ECDA12AC7B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Emails", "Domains\Catalogs.Email\Catalog.Emails.csproj", "{4DC93298-8175-4AD3-8426-3ECDA12AC7B3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Common", "Catalog.Common\Catalog.Common.csproj", "{E7F4ADBE-D7F0-45E1-8F6F-7A24F39B55B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Common", "Domains\Catalog.Common\Catalog.Common.csproj", "{E7F4ADBE-D7F0-45E1-8F6F-7A24F39B55B8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Persistence", "3-Persistence", "{0DF12B62-F8CC-4C9D-A1AB-4ABF50ACC252}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Repositories.Menus", "Catalog.Repositories.Menu\Catalog.Repositories.Menus.csproj", "{D78495E7-F0E5-444B-8E9C-963AB062699A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Repositories.Menus", "Repositories\Catalog.Repositories.Menu\Catalog.Repositories.Menus.csproj", "{D78495E7-F0E5-444B-8E9C-963AB062699A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Email", "Catalog.Email\Catalog.Email.csproj", "{5FE6C135-B3F7-4744-B049-99404D8942EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Email", "API\Catalog.Email\Catalog.Email.csproj", "{5FE6C135-B3F7-4744-B049-99404D8942EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.ApiGateway", "Catalog.ApiGateway\Catalog.ApiGateway.csproj", "{1549C6A0-65D6-4472-88E8-16884BF9CF3A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.ApiGateway", "API\Catalog.ApiGateway\Catalog.ApiGateway.csproj", "{1549C6A0-65D6-4472-88E8-16884BF9CF3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
