@@ -28,3 +28,5 @@ C:\repos\Catalog.Api\Domains\Catalog.Menu\obj\Debug\net6.0\Catalog.Menus.Assembl
 C:\repos\Catalog.Api\Domains\Catalog.Menu\obj\Debug\net6.0\Catalog.Menus.AssemblyInfo.cs
 C:\repos\Catalog.Api\Domains\Catalog.Menu\obj\Debug\net6.0\Catalog.Menus.csproj.CoreCompileInputs.cache
 C:\repos\Catalog.Api\Domains\Catalog.Menu\obj\Debug\net6.0\Catalog.Menus.csproj.CopyComplete
+C:\repos\Catalog.Api\Domains\Catalog.Menu\bin\Debug\net6.0\Catalog.Menus.runtimeconfig.json
+C:\repos\Catalog.Api\Domains\Catalog.Menu\obj\Debug\net6.0\Catalog.Menus.genruntimeconfig.cache

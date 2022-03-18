@@ -4,6 +4,7 @@ using Catalog.Menus.Contracts;
 using Catalog.Menus.Domains;
 using Catalog.Menus.Dtos;
 using MassTransit;
+using System.Data.Entity.Core;
 
 namespace Catalog.Menus.Services
 {
@@ -39,7 +40,6 @@ namespace Catalog.Menus.Services
 
                 await _menusRepository.AddAsync(model);
 
-
                 //Sending Emails
                 var email = new EmailMessage
                 {
@@ -54,24 +54,20 @@ namespace Catalog.Menus.Services
             }
             catch (Exception)
             {
-
                 throw;
             }
-
         }
 
         public async Task<IEnumerable<MenuDto>> GetAllAsync()
         {
             try
             {
-
                 var result = await _menusRepository.GetAllAsync();
 
                 return _mapper.Map<IEnumerable<MenuDto>>(result);
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -81,6 +77,11 @@ namespace Catalog.Menus.Services
             try
             {
                 var result = await _menusRepository.GetAsync(id);
+
+                if (result is null)
+                {
+                    throw new ObjectNotFoundException();
+                }
 
                 return _mapper.Map<MenuDto>(result);
             }
@@ -94,13 +95,17 @@ namespace Catalog.Menus.Services
         {
             try
             {
+                var model = await _menusRepository.GetAsync(id);
+
+                if (model is null)
+                {
+                    throw new ObjectNotFoundException();
+                }
 
                 await _menusRepository.RemoveAsync(id);
-
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -109,8 +114,12 @@ namespace Catalog.Menus.Services
         {
             try
             {
-
                 var model = await _menusRepository.GetAsync(id);
+
+                if (model is null)
+                {
+                    throw new ObjectNotFoundException();
+                }
 
                 if (dto.Price.HasValue)
                 {
@@ -122,12 +131,12 @@ namespace Catalog.Menus.Services
                     model.Cost = dto.Cost.Value;
                 }
 
-                if (!string.IsNullOrEmpty(dto.Name))
+                if (dto.Name is not null)
                 {
                     model.Name = dto.Name;
                 }
 
-                if (!string.IsNullOrEmpty(dto.Image))
+                if (dto.Image is not null)
                 {
                     model.Image = dto.Image;
                 }
@@ -136,7 +145,6 @@ namespace Catalog.Menus.Services
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

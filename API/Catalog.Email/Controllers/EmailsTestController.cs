@@ -8,7 +8,6 @@ namespace Catalog.Email.Controllers
     [Route("[controller]")]
     public class EmailsTestController : ControllerBase
     {
-
         private readonly IEmailService _emailService;
 
         public EmailsTestController(IEmailService emailService)
@@ -23,7 +22,7 @@ namespace Catalog.Email.Controllers
             {
                 MenuName = "test",
                 ToName = "ali",
-                ToEmail = "test"
+                ToEmail = "alizainaldeen17@gmail.com"
             });
 
             return Ok();

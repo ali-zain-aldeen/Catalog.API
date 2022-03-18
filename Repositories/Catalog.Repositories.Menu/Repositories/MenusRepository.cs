@@ -8,14 +8,12 @@ namespace Catalog.Repositories.Menus.Repositories
 {
     public class MenusRepository : IMenusRepository
     {
-
         #region Properties
 
         protected MenusDbContext _context;
         protected IMapper _mapper;
 
-
-        #endregion
+        #endregion Properties
 
         #region Constructor
 
@@ -25,7 +23,7 @@ namespace Catalog.Repositories.Menus.Repositories
             _mapper = mapper;
         }
 
-        #endregion
+        #endregion Constructor
 
         #region Methods
 
@@ -70,6 +68,5 @@ namespace Catalog.Repositories.Menus.Repositories
         }
 
         #endregion Methods
-
     }
 }

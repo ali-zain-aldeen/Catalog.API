@@ -13,7 +13,7 @@ namespace Catalog.Emails.Services
 
         private readonly MailSettings _mailSettings;
 
-        #endregion
+        #endregion Properties
 
         #region Costructor
 
@@ -22,7 +22,7 @@ namespace Catalog.Emails.Services
             _mailSettings = mailSettings;
         }
 
-        #endregion
+        #endregion Costructor
 
         #region Properties
 
@@ -48,6 +48,6 @@ namespace Catalog.Emails.Services
             }
         }
 
-        #endregion
+        #endregion Properties
     }
 }

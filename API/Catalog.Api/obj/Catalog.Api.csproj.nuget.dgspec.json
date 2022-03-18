@@ -254,6 +254,10 @@
               "target": "Package",
               "version": "[11.0.0, )"
             },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[10.4.0, )"

@@ -15,7 +15,7 @@ namespace Catalog.Api.Controllers.Menus
         private readonly AbstractValidator<AddMenuDto> _addMenueValidator;
         private readonly AbstractValidator<UpdateMenuDto> _updateMenueValidator;
 
-        #endregion
+        #endregion Properties
 
         #region Constructor
 
@@ -26,7 +26,7 @@ namespace Catalog.Api.Controllers.Menus
             _updateMenueValidator = updateMenueValidator;
         }
 
-        #endregion
+        #endregion Constructor
 
         #region Methods
 
@@ -114,7 +114,6 @@ namespace Catalog.Api.Controllers.Menus
             }
         }
 
-
-        #endregion
+        #endregion Methods
     }
 }

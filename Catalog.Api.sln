@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Repositories.Menus"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Email", "API\Catalog.Email\Catalog.Email.csproj", "{5FE6C135-B3F7-4744-B049-99404D8942EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.ApiGateway", "API\Catalog.ApiGateway\Catalog.ApiGateway.csproj", "{1549C6A0-65D6-4472-88E8-16884BF9CF3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.ApiGateway", "API\Catalog.ApiGateway\Catalog.ApiGateway.csproj", "{1549C6A0-65D6-4472-88E8-16884BF9CF3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Menus.Test", "Tests\Catalog.Menus.Test\Catalog.Menus.Test.csproj", "{21C4B2EC-CF57-4ED7-8AAB-111D3A94F368}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{1549C6A0-65D6-4472-88E8-16884BF9CF3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1549C6A0-65D6-4472-88E8-16884BF9CF3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1549C6A0-65D6-4472-88E8-16884BF9CF3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21C4B2EC-CF57-4ED7-8AAB-111D3A94F368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21C4B2EC-CF57-4ED7-8AAB-111D3A94F368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21C4B2EC-CF57-4ED7-8AAB-111D3A94F368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21C4B2EC-CF57-4ED7-8AAB-111D3A94F368}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{D78495E7-F0E5-444B-8E9C-963AB062699A} = {0DF12B62-F8CC-4C9D-A1AB-4ABF50ACC252}
 		{5FE6C135-B3F7-4744-B049-99404D8942EC} = {C47A2211-E084-4EA2-AA5E-843178982B72}
 		{1549C6A0-65D6-4472-88E8-16884BF9CF3A} = {C47A2211-E084-4EA2-AA5E-843178982B72}
+		{21C4B2EC-CF57-4ED7-8AAB-111D3A94F368} = {8499A1DD-9163-4CF6-9429-2410A77698FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {537F9700-2964-460D-B5C9-DC0F94C518D0}

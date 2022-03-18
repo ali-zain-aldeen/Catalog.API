@@ -10,7 +10,7 @@ namespace Catalog.Emails.Services
 
         private readonly IEmailService _emailService;
 
-        #endregion
+        #endregion Properties
 
         #region Constructor
 
@@ -19,7 +19,7 @@ namespace Catalog.Emails.Services
             _emailService = emailService;
         }
 
-        #endregion
+        #endregion Constructor
 
         #region Methods
 
@@ -30,6 +30,6 @@ namespace Catalog.Emails.Services
             await _emailService.SendEmailAsync(data);
         }
 
-        #endregion
+        #endregion Methods
     }
 }

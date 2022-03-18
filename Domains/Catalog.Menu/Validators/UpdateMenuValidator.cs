@@ -14,8 +14,8 @@ namespace Catalog.Menus.Validators
         private bool BeValidUpdateOperation(UpdateMenuDto dto)
         {
             return
-                !string.IsNullOrEmpty(dto.Name)
-                || !string.IsNullOrEmpty(dto.Image)
+                   dto.Name is not null
+                || dto.Image is not null
                 || dto.Price.HasValue
                 || dto.Cost.HasValue;
         }

@@ -14,7 +14,7 @@ namespace Catalog.Repositories.Menus
 
         public DbSet<MenuEntity> Menues { get; set; }
 
-        #endregion
+        #endregion Entites
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
